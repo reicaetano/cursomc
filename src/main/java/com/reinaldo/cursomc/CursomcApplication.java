@@ -107,7 +107,7 @@ public class CursomcApplication implements CommandLineRunner {
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 		
 		
-		Pedido ped1 = new Pedido(null, sdf.parse("30/09/2017 10:32"), cli1, e1 );
+		Pedido ped1 = new Pedido(null, sdf.parse("30/09/2017 00:00"), cli1, e1 );
 		Pedido ped2 = new Pedido(null, sdf.parse("10/10/2017 19:35"), cli1, e2 );
 		
 		cli1.getPedidos().addAll(Arrays.asList(ped1, ped2));
@@ -123,7 +123,7 @@ public class CursomcApplication implements CommandLineRunner {
 		
 		pedidoRepository.saveAll(Arrays.asList(ped1, ped2));
 		pagamentoRepository.saveAll(Arrays.asList(pagto2));	
-//		pagamentoRepository.saveAll(Arrays.asList(pagto1));
+		pagamentoRepository.saveAll(Arrays.asList(pagto1));
 		
 	}
 }
